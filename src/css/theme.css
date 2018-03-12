@@ -1,0 +1,147 @@
+/*
+    Theme
+-------------------------------
+*/
+
+:root {
+  --header-height: calc(var(--unit) * 2);
+}
+
+[v-cloak] {
+  display: none;
+}
+
+.container {
+  padding-left: var(--container-padding);
+  padding-right: var(--container-padding);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.topbar {
+  height: calc(var(--unit) * 3);
+  z-index: 1;
+  padding-top: var(--unit-l);
+}
+
+.header {
+  height: calc(var(--unit) * 40);
+  color: var(--color-bg);
+}
+
+.header-img {
+  background-color: var(--color-inverse);
+}
+
+.header-overlay {
+  background: linear-gradient(
+    to right,
+    var(--color-inverse),
+    var(--color-transparent)
+  );
+  mix-blend-mode: multiply;
+}
+
+.header-img img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.header-content {
+  padding-top: calc(var(--unit) * 6);
+}
+
+.logo {
+  max-height: calc(var(--unit) * 3);
+}
+
+.blob-logo {
+  gf: blob 1/2;
+  align-self: center;
+}
+
+.separator {
+  display: block;
+  width: calc(var(--col-width) / 2 - var(--gutter));
+  height: 3px;
+  margin-top: calc(var(--unit) * 2);
+  margin-bottom: calc(var(--unit) * 2);
+  background: #3f51b5;
+  background: linear-gradient(to right, #3f51b5, #00c8aa);
+}
+
+.lead {
+  padding: var(--unit);
+  typescale: 2 1.5;
+  color: var(--color-neutral);
+  font-style: italic;
+}
+
+.shadow {
+  box-shadow: var(--unit-xs) var(--unit-xs) var(--unit)
+    color-mod(var(--color-inverse) alpha(0.25));
+}
+
+@media (--viewport-tablet) {
+  .container {
+    width: calc(2 * var(--col-width) + var(--gutter));
+  }
+
+  .header {
+    height: calc(var(--unit) * 30);
+  }
+
+  .form-blobs {
+    gf: row 0;
+  }
+
+  .form-blob {
+    gf: blob 1/2 0;
+  }
+
+  input.pill-1 {
+    border-radius: var(--unit-infinity) 0 0 var(--unit-infinity);
+    padding-left: var(--unit-xl);
+  }
+
+  .pill-2 {
+    border-radius: 0 var(--unit-infinity) var(--unit-infinity) 0;
+  }
+}
+
+@media (--viewport-desktop) {
+  .desktop-static {
+    visibility: visible;
+    display: initial;
+  }
+
+  .desktop-blobs {
+    gf: row;
+    align-items: stretch;
+  }
+
+  .desktop-blob-1-3 {
+    gf: blob 1/3;
+  }
+
+  .container {
+    width: calc(3 * var(--col-width) + var(--gutter));
+  }
+
+  h1 {
+    typescale: 4 3;
+  }
+
+  .form-blob {
+    gf: blob 1/3 0;
+  }
+
+  .blob-logo {
+    gf: blob 1/3;
+  }
+
+  .lead {
+    padding: var(--unit-xl);
+  }
+}

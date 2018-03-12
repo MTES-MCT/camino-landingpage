@@ -1,0 +1,47 @@
+/*
+      Buttons
+-------------------------------
+*/
+
+@button default {
+  button-border-width: 0;
+  button-color: var(--color-text) var(--color-inverse) var(--color-bg);
+  button-background: var(--color-alt) var(--color-alt) var(--color-highlight);
+  button-class: active disabled;
+}
+
+.btn {
+  button: default;
+}
+
+.btn-border {
+  button-border: var(--unit-line) var(--color-bg) var(--color-bg)
+    var(--color-bg);
+  button-color: var(--color-text) var(--color-inverse) var(--color-bg);
+  button-background: var(--color-alt) var(--color-alt) var(--color-highlight);
+  button-class: active disabled;
+}
+
+.tag .btn,
+.btn-alt {
+  button-color: var(--color-bg) var(--color-bg) var(--color-bg);
+  button-background: var(--color-brand) var(--color-brand)
+    var(--color-highlight);
+  button-class: active disabled;
+}
+
+.btn,
+.btn-alt,
+.btn-border,
+.btn-transparent {
+  transition: var(--transition);
+  font-weight: 700;
+}
+
+.btn-border {
+  border-radius: var(--unit-xs);
+}
+
+.btn-icon {
+  line-height: 1rem;
+}

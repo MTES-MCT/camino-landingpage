@@ -1,0 +1,109 @@
+{
+  "name": "camino-landingpage",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rm -rf dist",
+    "dev": "NODE_ENV=development && webpack-serve",
+    "dist": "npm run clean && NODE_ENV=production && webpack"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.0.0-beta.40",
+    "@babel/preset-env": "^7.0.0-beta.40",
+    "@babel/register": "^7.0.0-beta.40",
+    "axios": "^0.18.0",
+    "babel-loader": "^8.0.0-beta.0",
+    "copy-webpack-plugin": "^4.5.1",
+    "css-loader": "^0.28.10",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "pixrem": "^4.0.1",
+    "pleeease-filters": "^4.0.0",
+    "postcss-button": "^0.3.7",
+    "postcss-calc": "^6.0.1",
+    "postcss-color-mod-function": "^2.4.2",
+    "postcss-custom-media": "^6.0.0",
+    "postcss-custom-properties": "^7.0.0",
+    "postcss-custom-selectors": "^4.0.1",
+    "postcss-font-family-system-ui": "^3.0.0",
+    "postcss-font-variant": "^3.0.0",
+    "postcss-grid-fluid": "^0.2.1",
+    "postcss-grid-system": "^0.4.11",
+    "postcss-image-set-polyfill": "^0.4.4",
+    "postcss-import": "^11.1.0",
+    "postcss-inline-svg": "^3.0.0",
+    "postcss-loader": "^2.1.1",
+    "postcss-media-minmax": "^3.0.0",
+    "postcss-nesting": "^4.2.1",
+    "postcss-normalize": "^4.0.0",
+    "postcss-selector-matches": "^3.0.1",
+    "postcss-selector-not": "^3.0.1",
+    "postcss-typescale": "^0.2.1",
+    "postcss-url": "^7.3.1",
+    "prettier-eslint": "^8.8.1",
+    "prettier-stylelint": "^0.4.2",
+    "style-loader": "^0.20.3",
+    "stylelint": "^9.1.1",
+    "stylelint-config-standard": "^18.2.0",
+    "url-loader": "^1.0.1",
+    "webpack": "^4.1.1",
+    "webpack-cli": "^2.0.11",
+    "webpack-dev-server": "^3.1.1",
+    "webpack-serve": "^0.2.0"
+  },
+  "postcss": {
+    "plugins": {
+      "postcss-normalize": {},
+      "postcss-import": {},
+      "postcss-typescale": {},
+      "postcss-custom-properties": {},
+      "postcss-calc": {},
+      "postcss-image-set-polyfill": {},
+      "postcss-nesting": {},
+      "postcss-custom-media": {},
+      "postcss-media-minmax": {},
+      "postcss-custom-selectors": {},
+      "postcss-color-mod-function": {},
+      "postcss-font-family-system-ui": {},
+      "postcss-font-variant": {},
+      "pleeease-filters": {},
+      "pixrem": {
+        "html": false
+      },
+      "postcss-selector-matches": {},
+      "postcss-selector-not": {},
+      "postcss-grid-system": {},
+      "postcss-grid-fluid": {},
+      "postcss-button": {},
+      "postcss-inline-svg": {},
+      "autoprefixer": {}
+    }
+  },
+  "stylelint": {
+    "extends": "stylelint-config-standard",
+    "rules": {
+      "property-no-unknown": [
+        true,
+        {
+          "ignoreProperties": ["typescale", "gf", "/button-/"]
+        }
+      ],
+      "at-rule-no-unknown": [
+        true,
+        {
+          "ignoreAtRules": ["typescale"]
+        }
+      ]
+    },
+    "ignoreFiles": ["./dist/**/*"]
+  },
+  "browserslist": ["> 1%", "last 2 versions", "not ie <= 8"],
+  "serve": {
+    "dev": {
+      "publicPath": "/dist"
+    }
+  }
+}
