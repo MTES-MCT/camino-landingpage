@@ -72,8 +72,8 @@
 }
 
 .lead {
+  typescale: 1 1.25;
   padding: var(--unit);
-  typescale: 2 1.5;
   color: var(--color-neutral);
   font-style: italic;
 }
@@ -131,6 +131,14 @@
 
   h1 {
     typescale: 4 3;
+  }
+
+  h2 {
+    typescale: 3 2;
+  }
+
+  .lead {
+    typescale: 2 1.5;
   }
 
   .form-blob {

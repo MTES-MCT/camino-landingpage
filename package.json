@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean": "rm -rf dist",
-    "dev": "NODE_ENV=development && webpack-serve",
+    "dev": "npm run clean && NODE_ENV=development && webpack-serve",
     "dist": "npm run clean && NODE_ENV=production && webpack"
   },
   "author": "",
