@@ -91,31 +91,19 @@
       "property-no-unknown": [
         true,
         {
-          "ignoreProperties": [
-            "typescale",
-            "gf",
-            "/button-/"
-          ]
+          "ignoreProperties": ["typescale", "gf", "/button-/"]
         }
       ],
       "at-rule-no-unknown": [
         true,
         {
-          "ignoreAtRules": [
-            "typescale"
-          ]
+          "ignoreAtRules": ["typescale"]
         }
       ]
     },
-    "ignoreFiles": [
-      "./dist/**/*"
-    ]
+    "ignoreFiles": ["./dist/**/*"]
   },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not ie <= 8"
-  ],
+  "browserslist": ["> 1%", "last 2 versions", "not ie <= 8"],
   "serve": {
     "dev": {
       "publicPath": "/dist"

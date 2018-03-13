@@ -126,7 +126,14 @@ select:-webkit-autofill {
 
 /* remove round corner on iOs */
 
-input:not([type='radio']):not([type='checkbox']):not(.rnd):not(.pill):not(.pill-1):not(.pill-2),
+input[type='button'],
+input[type='email'],
+input[type='file'],
+input[type='password'],
+input[type='submit'],
+input[type='tel'],
+input[type='text'],
+input[type='url'],
 select {
   -webkit-appearance: none;
   border-radius: 0;
