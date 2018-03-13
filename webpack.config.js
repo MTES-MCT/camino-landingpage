@@ -2,7 +2,6 @@ const dev = process.env.NODE_ENV !== 'production'
 const path = require('path')
 const webpack = require('webpack')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
-const CopyWebpackPlugin = require('copy-webpack-plugin')
 const UglifyWebpackPlugin = require('uglifyjs-webpack-plugin')
 const npmPackage = require('./package.json')
 
@@ -87,14 +86,6 @@ module.exports = {
           filename: './styles.css',
           allChunks: true
         }),
-        new UglifyWebpackPlugin(),
-        new CopyWebpackPlugin([
-          {
-            from: path.resolve(
-              __dirname,
-              'node_modules/html5shiv/dist/Html5shiv.min.js'
-            )
-          }
-        ])
+        new UglifyWebpackPlugin()
       ]
 }
