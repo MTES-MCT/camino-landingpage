@@ -1,21 +1,25 @@
 {
   "name": "camino-landingpage",
   "version": "0.1.0",
-  "description": "",
+  "description": "Landing page for Camino project",
   "main": "index.js",
+  "repository": "https://github.com/MTES-MCT/camino-landingpage",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean": "rm -rf dist",
     "dev": "npm run clean && NODE_ENV=development && webpack-serve",
     "dist": "npm run clean && NODE_ENV=production && webpack"
   },
-  "author": "",
+  "author": {
+    "name": "François Romain",
+    "email": "francoisromain@gmail.com",
+    "url": "https://francoisromain.com"
+  },
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.0.0-beta.40",
     "@babel/preset-env": "^7.0.0-beta.40",
     "@babel/register": "^7.0.0-beta.40",
-    "axios": "^0.18.0",
     "babel-loader": "^8.0.0-beta.0",
     "css-loader": "^0.28.10",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
@@ -87,19 +91,31 @@
       "property-no-unknown": [
         true,
         {
-          "ignoreProperties": ["typescale", "gf", "/button-/"]
+          "ignoreProperties": [
+            "typescale",
+            "gf",
+            "/button-/"
+          ]
         }
       ],
       "at-rule-no-unknown": [
         true,
         {
-          "ignoreAtRules": ["typescale"]
+          "ignoreAtRules": [
+            "typescale"
+          ]
         }
       ]
     },
-    "ignoreFiles": ["./dist/**/*"]
+    "ignoreFiles": [
+      "./dist/**/*"
+    ]
   },
-  "browserslist": ["> 1%", "last 2 versions", "not ie <= 8"],
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ],
   "serve": {
     "dev": {
       "publicPath": "/dist"
