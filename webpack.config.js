@@ -13,6 +13,11 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: 'scripts.js'
   },
+  serve: {
+    devMiddleware: {
+      publicPath: '/dist/'
+    }
+  },
   devtool: dev ? 'cheap-module-eval-source-map' : false,
   module: {
     rules: [
